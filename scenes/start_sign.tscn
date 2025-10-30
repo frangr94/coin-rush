@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://owq1h7h6fucg" path="res://assets/sprites/world_tileset.png" id="1_dn0s4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3seiy"]
+size = Vector2(20, 152)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ou7q6"]
 atlas = ExtResource("1_dn0s4")
@@ -24,6 +25,7 @@ animations = [{
 script = ExtResource("1_3seiy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -66)
 shape = SubResource("RectangleShape2D_3seiy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
