@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkqqpbn3q2d61"]
+
+[ext_resource type="Script" uid="uid://bhw5mlmv2ovjj" path="res://scripts/start_sign.gd" id="1_3seiy"]
+[ext_resource type="Texture2D" uid="uid://owq1h7h6fucg" path="res://assets/sprites/world_tileset.png" id="1_dn0s4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3seiy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou7q6"]
+atlas = ExtResource("1_dn0s4")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr0el"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou7q6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="start_sign" type="Area2D"]
+script = ExtResource("1_3seiy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3seiy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dr0el")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
