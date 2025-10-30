@@ -5,7 +5,6 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var timer: Timer = $Timer
 
 
 func _physics_process(delta: float) -> void:

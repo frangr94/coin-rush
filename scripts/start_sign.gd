@@ -4,12 +4,12 @@ extends Area2D
 @onready var time_label: Label = $"../../UI/TimeLabel"
 
 # Called when the body collides
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	timer.start()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	time_label.text = str(int(timer.time_left)) + "/" + str(int(timer.wait_time))
 
 
