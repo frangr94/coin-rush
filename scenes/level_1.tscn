@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=4 uid="uid://hcno64ekhqbr"]
+[gd_scene load_steps=24 format=4 uid="uid://hcno64ekhqbr"]
 
+[ext_resource type="PackedScene" uid="uid://d1qj10y06xon1" path="res://scenes/menu.tscn" id="1_2aecg"]
 [ext_resource type="PackedScene" uid="uid://cj4ohda1vcap8" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="FontFile" uid="uid://dy0h01gg66of2" path="res://assets/fonts/PixelOperator8.ttf" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://owq1h7h6fucg" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
@@ -355,6 +356,8 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+
+[node name="menu" parent="." instance=ExtResource("1_2aecg")]
 
 [node name="Level 1" type="Node" parent="."]
 
