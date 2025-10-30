@@ -2,6 +2,12 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 
+# Save last level name
+func _ready():
+	var config = ConfigFile.new()
+	config.set_value("game", "last_scene", get_tree().current_scene.scene_file_path)
+	config.save("user://save_data.cfg")
+	print(ProjectSettings.globalize_path("user://save_data.cfg"))
 
 func _on_body_entered(body: Node2D) -> void:
 	Engine.time_scale = 0.5 # slowdown on death
