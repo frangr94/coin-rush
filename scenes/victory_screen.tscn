@@ -37,12 +37,16 @@ theme_override_constants/separation = 10
 
 [node name="next_level" type="Button" parent="buttons"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../menu")
+focus_neighbor_bottom = NodePath("../menu")
 theme_override_fonts/font = ExtResource("1_ujlt3")
 theme_override_font_sizes/font_size = 32
 text = "Next level"
 
 [node name="menu" type="Button" parent="buttons"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../next_level")
+focus_neighbor_bottom = NodePath("../next_level")
 theme_override_fonts/font = ExtResource("1_ujlt3")
 theme_override_font_sizes/font_size = 32
 text = "Main menu"

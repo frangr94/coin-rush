@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1qj10y06xon1"]
+[gd_scene load_steps=10 format=3 uid="uid://d1qj10y06xon1"]
 
 [ext_resource type="Script" uid="uid://cudgutygfca47" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://cw5sulx32kmv5" path="res://assets/sprites/menu_background.png" id="1_vjb58"]
@@ -17,6 +17,19 @@ expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v86rl"]
+bg_color = Color(0.17818825, 0.17818825, 0.17818825, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3eks"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -54,37 +67,48 @@ theme_override_constants/separation = 18
 [node name="start" type="Button" parent="buttons"]
 layout_mode = 2
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Exit")
+focus_neighbor_bottom = NodePath("../level_select")
 theme_override_fonts/font = ExtResource("1_yqeox")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+theme_override_styles/focus = SubResource("StyleBoxFlat_con2f")
 text = "Start game"
 
 [node name="level_select" type="Button" parent="buttons"]
 layout_mode = 2
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../start")
 theme_override_fonts/font = ExtResource("1_yqeox")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mhnvy")
 text = "Level select"
 
 [node name="options" type="Button" parent="buttons"]
 layout_mode = 2
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../level_select")
+focus_neighbor_bottom = NodePath("../Exit")
 theme_override_fonts/font = ExtResource("1_yqeox")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mhnvy")
 text = "Options"
 
 [node name="Exit" type="Button" parent="buttons"]
 layout_mode = 2
 size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../start")
 theme_override_fonts/font = ExtResource("1_yqeox")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g3eks")
 text = "Exit"
 
 [connection signal="pressed" from="buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="buttons/level_select" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="buttons/level_select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="buttons/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttons/options" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="buttons/Exit" to="." method="_on_exit_pressed"]
