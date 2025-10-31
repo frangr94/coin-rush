@@ -85,5 +85,6 @@ text = "Exit"
 
 [connection signal="pressed" from="buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="buttons/level_select" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="buttons/level_select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="buttons/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="buttons/Exit" to="." method="_on_exit_pressed"]
