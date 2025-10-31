@@ -332,36 +332,6 @@ script = SubResource("GDScript_3bmlt")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("3_pbc48")
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="CoinUi" type="Sprite2D" parent="UI"]
-position = Vector2(1554, 28)
-scale = Vector2(2.375, 2.375)
-texture = ExtResource("4_wo48x")
-
-[node name="ScoreLabel" type="Label" parent="UI"]
-offset_left = 1573.0
-offset_top = 16.0
-offset_right = 1651.0
-offset_bottom = 67.0
-theme_override_fonts/font = ExtResource("5_y0kc7")
-theme_override_font_sizes/font_size = 24
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Stopwatch" type="Sprite2D" parent="UI"]
-position = Vector2(1555, 63)
-texture = ExtResource("6_ne2mo")
-
-[node name="TimeLabel" type="Label" parent="UI"]
-offset_left = 1571.0
-offset_top = 54.0
-offset_right = 1669.0
-offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("5_y0kc7")
-theme_override_font_sizes/font_size = 24
-metadata/_edit_use_anchors_ = true
-
 [node name="Map" type="Node" parent="."]
 
 [node name="background" type="TileMapLayer" parent="Map"]
@@ -467,7 +437,6 @@ shape = SubResource("WorldBoundaryShape2D_172wr")
 [node name="start_sign" parent="Map" instance=ExtResource("7_y0kc7")]
 position = Vector2(-620, 5)
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("8_ne2mo")
 
 [node name="fixed_platforms" type="Node" parent="Map"]
@@ -512,3 +481,44 @@ position = Vector2(-499, -227)
 
 [node name="slime2" parent="Map" instance=ExtResource("14_fldb1")]
 position = Vector2(-341, -227)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.9713542
+anchor_right = 1.0
+anchor_bottom = 0.043518517
+offset_left = -99.0
+offset_bottom = 52.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinUi" type="TextureRect" parent="UI/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_wo48x")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="ScoreLabel" type="Label" parent="UI/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_y0kc7")
+theme_override_font_sizes/font_size = 24
+text = "score"
+horizontal_alignment = 1
+
+[node name="WatchUI" type="TextureRect" parent="UI/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_ne2mo")
+stretch_mode = 5
+
+[node name="TimeLabel" type="Label" parent="UI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("5_y0kc7")
+theme_override_font_sizes/font_size = 24
+text = "time"
+metadata/_edit_use_anchors_ = true

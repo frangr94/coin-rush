@@ -529,31 +529,43 @@ script = SubResource("GDScript_p57ef")
 
 [node name="UI" type="CanvasLayer" parent="Level 1"]
 
-[node name="CoinUi" type="Sprite2D" parent="Level 1/UI"]
-position = Vector2(1554, 28)
-scale = Vector2(2.375, 2.375)
-texture = ExtResource("10_2y5yt")
+[node name="GridContainer" type="GridContainer" parent="Level 1/UI"]
+anchors_preset = -1
+anchor_left = 0.9713542
+anchor_right = 1.0
+anchor_bottom = 0.043518517
+offset_left = -99.0
+offset_bottom = 52.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="ScoreLabel" type="Label" parent="Level 1/UI"]
-offset_left = 1573.0
-offset_top = 16.0
-offset_right = 1651.0
-offset_bottom = 67.0
+[node name="CoinUi" type="TextureRect" parent="Level 1/UI/GridContainer"]
+layout_mode = 2
+texture = ExtResource("10_2y5yt")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="ScoreLabel" type="Label" parent="Level 1/UI/GridContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_iywne")
 theme_override_font_sizes/font_size = 24
+text = "score"
 horizontal_alignment = 1
 
-[node name="Stopwatch" type="Sprite2D" parent="Level 1/UI"]
-position = Vector2(1555, 63)
+[node name="WatchUI" type="TextureRect" parent="Level 1/UI/GridContainer"]
+layout_mode = 2
 texture = ExtResource("9_e3sih")
+stretch_mode = 5
 
-[node name="TimeLabel" type="Label" parent="Level 1/UI"]
-offset_left = 1571.0
-offset_top = 54.0
-offset_right = 1669.0
-offset_bottom = 105.0
+[node name="TimeLabel" type="Label" parent="Level 1/UI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
 theme_override_fonts/font = ExtResource("2_iywne")
 theme_override_font_sizes/font_size = 24
+text = "time"
 metadata/_edit_use_anchors_ = true
 
 [node name="moving_platforms" type="Node" parent="Level 1"]

@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 # cambiar
-@onready var time_label: Label = $"../../UI/TimeLabel"
+@onready var time_label: Label = $"../../UI/GridContainer/TimeLabel"
 
 func _ready() -> void:
 	$Timer.wait_time = 30

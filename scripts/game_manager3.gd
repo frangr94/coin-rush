@@ -4,8 +4,7 @@ extends Node
 var score = 0
 var win_score = 20
 
-
-@onready var score_label: Label = $"../UI/ScoreLabel"
+@onready var score_label: Label = $"../UI/GridContainer/ScoreLabel"
 
 
 func add_point():
