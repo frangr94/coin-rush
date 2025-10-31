@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 
-# Save last level name
+# get scene path and save to config file for using on death screen
 func _ready():
 	var config = ConfigFile.new()
 	config.set_value("game", "last_scene", get_tree().current_scene.scene_file_path)
