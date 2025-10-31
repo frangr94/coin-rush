@@ -50,7 +50,7 @@ script = ExtResource("1_dyw1g")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_v5wyi")
 autoplay = "default"
-frame_progress = 0.71235424
+frame_progress = 0.99142206
 flip_h = true
 
 [node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
@@ -66,4 +66,4 @@ target_position = Vector2(10, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
-target_position = Vector2(-9, 0)
+target_position = Vector2(-10, 0)

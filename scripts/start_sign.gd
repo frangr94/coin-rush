@@ -20,4 +20,5 @@ func _process(_delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	timer.stop()
+	timer.queue_free()
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

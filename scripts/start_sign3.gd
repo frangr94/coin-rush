@@ -5,7 +5,7 @@ extends Area2D
 @onready var time_label: Label = $"../../UI/TimeLabel"
 
 func _ready() -> void:
-	$Timer.wait_time = 25
+	$Timer.wait_time = 30
 
 
 # Called when the body collides
