@@ -1,12 +1,17 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
+# cambiar
 @onready var time_label: Label = $"../../UI/TimeLabel"
+
+# set timer wait_time
+func _ready() -> void:
+	$Timer.wait_time = 20
 
 # Called when the body collides
 func _on_body_entered(_body: Node2D) -> void:
 	timer.start()
-	
+	$CollisionShape2D.set_deferred("disabled", true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
