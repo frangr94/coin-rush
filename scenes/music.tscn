@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://es4t7laqm8ek"]
+
+[ext_resource type="AudioStream" uid="uid://csib2fjlc6c42" path="res://assets/music/Riot_Panda - L.A. Arcade.mp3" id="1_05ggv"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_05ggv")
+autoplay = true
+bus = &"Music"
