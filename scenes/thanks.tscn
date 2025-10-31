@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6lko3m3ot37a"]
+
+[ext_resource type="FontFile" uid="uid://dy0h01gg66of2" path="res://assets/fonts/PixelOperator8.ttf" id="1_jhbyq"]
+[ext_resource type="Texture2D" uid="uid://bsv0w2un206ad" path="res://assets/sprites/heart_ui.png" id="2_cgh8i"]
+
+[node name="thanks" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -150.25
+offset_right = 640.0
+offset_bottom = 150.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="thanks" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jhbyq")
+theme_override_font_sizes/font_size = 64
+text = "Thank you for taking your
+ time to test Coin Rush!"
+
+[node name="heart" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_cgh8i")
+stretch_mode = 1

@@ -13,7 +13,10 @@ func _on_next_level_pressed() -> void:
 		if result:
 			var level_num = int(result.get_string(1))
 			var next_scene = path.replace(str(level_num), str(level_num + 1))
-			get_tree().change_scene_to_file(next_scene)
+			if ResourceLoader.exists(next_scene):
+				get_tree().change_scene_to_file(next_scene)
+			else:
+				get_tree().change_scene_to_file("res://scenes/thanks.tscn")
 
 
 
