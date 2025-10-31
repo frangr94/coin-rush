@@ -7,7 +7,10 @@ func _ready():
 	
 # start
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+	if get_tree().current_scene.scene_file_path == "res://scenes/level_1.tscn":
+		pass
+	else:	
+		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 	
 func _on_level_select_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
