@@ -532,15 +532,15 @@ position = Vector2(-155, -219)
 script = ExtResource("11_ax3dk")
 
 [node name="coin17" parent="Map/coins" instance=ExtResource("10_56dhn")]
-position = Vector2(-108, -246)
+position = Vector2(-108, -278)
 script = ExtResource("11_ax3dk")
 
 [node name="coin18" parent="Map/coins" instance=ExtResource("10_56dhn")]
-position = Vector2(-108, -265)
+position = Vector2(-108, -297)
 script = ExtResource("11_ax3dk")
 
 [node name="coin19" parent="Map/coins" instance=ExtResource("10_56dhn")]
-position = Vector2(-108, -283)
+position = Vector2(-108, -315)
 script = ExtResource("11_ax3dk")
 
 [node name="coin20" parent="Map/coins" instance=ExtResource("10_56dhn")]
