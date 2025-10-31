@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2723smsyakkx"]
+[gd_scene load_steps=5 format=3 uid="uid://d2723smsyakkx"]
 
 [ext_resource type="Script" uid="uid://dvxd26ja3arp5" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://dy0h01gg66of2" path="res://assets/fonts/PixelOperator8.ttf" id="1_xeevv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
 
 [node name="game_over" type="Control"]
 layout_mode = 3
@@ -56,16 +60,22 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../main_menu")
+focus_neighbor_bottom = NodePath("../main_menu")
 theme_override_fonts/font = ExtResource("1_xeevv")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_wqhvx")
 text = "Try again"
 
 [node name="main_menu" type="Button" parent="options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../try_again")
+focus_neighbor_bottom = NodePath("../try_again")
 theme_override_fonts/font = ExtResource("1_xeevv")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_tbwuq")
 text = "Main menu"
 
 [connection signal="pressed" from="options/try_again" to="." method="_on_try_again_pressed"]

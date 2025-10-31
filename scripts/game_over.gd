@@ -1,5 +1,10 @@
 extends Control
 
+@onready var try_again: Button = $options/try_again
+
+func _ready():
+	$options/try_again.grab_focus()
+
 # get scene path
 func _on_try_again_pressed():
 	var config = ConfigFile.new()

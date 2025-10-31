@@ -1,5 +1,10 @@
 extends Control
 
+@onready var start: Button = $buttons/start
+
+func _ready():
+	$buttons/start.grab_focus()
+	
 # start
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")

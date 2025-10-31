@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqkxuyb0x0fr6"]
+[gd_scene load_steps=7 format=3 uid="uid://dqkxuyb0x0fr6"]
 
 [ext_resource type="FontFile" uid="uid://dy0h01gg66of2" path="res://assets/fonts/PixelOperator8.ttf" id="1_3shnc"]
 [ext_resource type="Script" uid="uid://jkfarotuxysp" path="res://scripts/level_select.gd" id="1_p0wlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0wlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2epne"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rif6e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chg43"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -39,12 +47,14 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3shnc")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_p0wlc")
 text = "Level 1"
 
 [node name="level_2" type="Button" parent="levels"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3shnc")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_2epne")
 text = "Level 2
 "
 
@@ -52,6 +62,7 @@ text = "Level 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3shnc")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_rif6e")
 text = "Level 3
 "
 
@@ -59,6 +70,7 @@ text = "Level 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3shnc")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_chg43")
 text = "Main menu
 "
 

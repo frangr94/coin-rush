@@ -1,5 +1,10 @@
 extends Control
 
+@onready var next_level: Button = $buttons/next_level
+
+func _ready():
+	$buttons/next_level.grab_focus()
+
 
 func _on_next_level_pressed() -> void:
 	
