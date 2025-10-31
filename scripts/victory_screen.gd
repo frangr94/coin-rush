@@ -1,18 +1,6 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-
-
-
 func _on_next_level_pressed() -> void:
 	
 	var config = ConfigFile.new()
@@ -26,4 +14,9 @@ func _on_next_level_pressed() -> void:
 			var level_num = int(result.get_string(1))
 			var next_scene = path.replace(str(level_num), str(level_num + 1))
 			get_tree().change_scene_to_file(next_scene)
-			print(next_scene)  # res://scenes/level_2.tscn
+
+
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
