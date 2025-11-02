@@ -151,7 +151,7 @@ texture = ExtResource("7_wae8j")
 [sub_resource type="TileSet" id="TileSet_5xqnf"]
 sources/0 = SubResource("TileSetAtlasSource_p3r0x")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcx5n"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xqnf"]
 texture = ExtResource("7_wae8j")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -313,7 +313,7 @@ texture = ExtResource("7_wae8j")
 
 [sub_resource type="TileSet" id="TileSet_56dhn"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vcx5n")
+sources/0 = SubResource("TileSetAtlasSource_5xqnf")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ha73p"]
 distance = 19.0
