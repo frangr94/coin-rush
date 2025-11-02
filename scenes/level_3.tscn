@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dcomycfhafw36"]
+[gd_scene load_steps=31 format=4 uid="uid://dcomycfhafw36"]
 
 [ext_resource type="PackedScene" uid="uid://cj4ohda1vcap8" path="res://scenes/player.tscn" id="1_70nk6"]
 [ext_resource type="Script" uid="uid://dvr4vygngtuop" path="res://scripts/game_manager3.gd" id="2_ah8om"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dyr8nbf64pwhf" path="res://scripts/start_sign3.gd" id="9_vcx5n"]
 [ext_resource type="PackedScene" uid="uid://buya2j324fbnx" path="res://scenes/coin.tscn" id="10_56dhn"]
 [ext_resource type="Script" uid="uid://54u2v6yfmurq" path="res://scripts/coin3.gd" id="11_ax3dk"]
+[ext_resource type="PackedScene" uid="uid://c2rijshbf310y" path="res://scenes/green_arrow_indicator.tscn" id="12_5xqnf"]
 [ext_resource type="PackedScene" uid="uid://qnct5ku8lk2u" path="res://scenes/slime.tscn" id="12_ax3dk"]
 [ext_resource type="PackedScene" uid="uid://bw3s42hhkdc3t" path="res://scenes/grass_platform.tscn" id="13_q2dsb"]
 [ext_resource type="PackedScene" uid="uid://brto1cjfobyt3" path="res://scenes/slime_red.tscn" id="14_p3r0x"]
@@ -604,6 +605,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_wa6ex")
 }
 autoplay = "new_animation"
+
+[node name="green_arrow_indicator" parent="Map" instance=ExtResource("12_5xqnf")]
+position = Vector2(-623, -13)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

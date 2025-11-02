@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2rijshbf310y"]
+
+[ext_resource type="Texture2D" uid="uid://c3i8eoq8c3yl8" path="res://assets/sprites/green_arrow_animation.png" id="1_peit3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr8tq"]
+atlas = ExtResource("1_peit3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45mo"]
+atlas = ExtResource("1_peit3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcfld"]
+atlas = ExtResource("1_peit3")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ltisb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr8tq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcfld")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="green_arrow_indicator" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ltisb")
+autoplay = "default"
+frame_progress = 0.73311687
