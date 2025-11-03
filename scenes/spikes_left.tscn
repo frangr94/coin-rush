@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bim1ak5p2prau"]
+
+[ext_resource type="Texture2D" uid="uid://cv14oj7jwym6j" path="res://assets/sprites/spikes_left.png" id="1_5y8ul"]
+
+[node name="spikes_left" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5y8ul")

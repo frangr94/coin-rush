@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjxvupr0onm0h"]
+
+[ext_resource type="Texture2D" uid="uid://y3yxje8jnqcb" path="res://assets/sprites/steel_moving_platform.png" id="1_777l5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjh8t"]
+size = Vector2(32, 8)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+texture = ExtResource("1_777l5")
+region_enabled = true
+region_rect = Rect2(0, 11, 32, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cjh8t")

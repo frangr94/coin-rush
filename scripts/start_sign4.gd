@@ -6,7 +6,7 @@ extends Area2D
 
 
 func _ready() -> void:
-	$Timer.wait_time = 30
+	$Timer.wait_time = 35
 
 
 # Called when the body collides
