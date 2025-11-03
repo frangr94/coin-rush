@@ -470,6 +470,21 @@ _data = {
 &"move": SubResource("Animation_q41qf")
 }
 
+[sub_resource type="Animation" id="Animation_u7ckc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-413, -302)]
+}
+
 [sub_resource type="Animation" id="Animation_kqmrt"]
 resource_name = "move"
 length = 3.0
@@ -486,7 +501,13 @@ tracks/0/keys = {
 "values": [Vector2(-413, -302), Vector2(-413, -352), Vector2(-413, -352), Vector2(-413, -398)]
 }
 
-[sub_resource type="Animation" id="Animation_u7ckc"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rg5ri"]
+_data = {
+&"RESET": SubResource("Animation_u7ckc"),
+&"move": SubResource("Animation_kqmrt")
+}
+
+[sub_resource type="Animation" id="Animation_lp0k0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -498,13 +519,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-413, -302)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rg5ri"]
-_data = {
-&"RESET": SubResource("Animation_u7ckc"),
-&"move": SubResource("Animation_kqmrt")
+"values": [Vector2(-107, -414)]
 }
 
 [sub_resource type="Animation" id="Animation_rg5ri"]
@@ -521,21 +536,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-107, -414), Vector2(-107, -504), Vector2(-610, -504)]
-}
-
-[sub_resource type="Animation" id="Animation_lp0k0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-107, -414)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ifqri"]

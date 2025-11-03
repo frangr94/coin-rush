@@ -1,8 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://bim1ak5p2prau"]
 
-[ext_resource type="Texture2D" uid="uid://cv14oj7jwym6j" path="res://assets/sprites/spikes_left.png" id="1_5y8ul"]
+[ext_resource type="Texture2D" uid="uid://bcvujturdonxd" path="res://assets/sprites/extra_tiles.png" id="1_5y8ul"]
 
 [node name="spikes_left" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+rotation = 1.5707964
 texture = ExtResource("1_5y8ul")
+region_enabled = true
+region_rect = Rect2(18, 35, 13, 14)

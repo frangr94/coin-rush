@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjctkv22b1l60"]
+
+[ext_resource type="Texture2D" uid="uid://bcvujturdonxd" path="res://assets/sprites/extra_tiles.png" id="1_u2t6j"]
+
+[node name="mud_platform_spikes" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u2t6j")
+region_enabled = true
+region_rect = Rect2(16, 35, 16, 14)
