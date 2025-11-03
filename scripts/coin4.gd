@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-@onready var game_manager: Node = $"../GameManager"
+@onready var game_manager: Node = $"../../GameManager"
 
 
 # Collision effect
