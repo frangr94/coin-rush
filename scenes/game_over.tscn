@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2723smsyakkx"]
+[gd_scene load_steps=7 format=3 uid="uid://d2723smsyakkx"]
 
 [ext_resource type="Script" uid="uid://dvxd26ja3arp5" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://dy0h01gg66of2" path="res://assets/fonts/PixelOperator8.ttf" id="1_xeevv"]
 [ext_resource type="Texture2D" uid="uid://csr3dvglh1t07" path="res://assets/images/laughtercat.png" id="3_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://cxgxl8qyo4ote" path="res://assets/sounds/laughter_cat.mp3" id="4_racf3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
 
@@ -96,6 +97,9 @@ theme_override_fonts/font = ExtResource("1_xeevv")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxFlat_tbwuq")
 text = "Main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_racf3")
 
 [connection signal="pressed" from="options/try_again" to="." method="_on_try_again_pressed"]
 [connection signal="pressed" from="options/main_menu" to="." method="_on_main_menu_pressed"]

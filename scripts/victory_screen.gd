@@ -1,9 +1,11 @@
 extends Control
 
 @onready var next_level: Button = $buttons/next_level
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	$buttons/next_level.grab_focus()
+	audio_stream_player.play()
 
 
 func _on_next_level_pressed() -> void:

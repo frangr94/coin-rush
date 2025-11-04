@@ -1,9 +1,12 @@
 extends Control
 
 @onready var try_again: Button = $options/try_again
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	$options/try_again.grab_focus()
+	audio_stream_player.play()
+	
 
 # get scene path
 func _on_try_again_pressed():
