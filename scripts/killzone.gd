@@ -1,6 +1,6 @@
 # duplicar
 extends Area2D
-@onready var player: CharacterBody2D = $"../Player"
+
 
 @onready var timer: Timer = $Timer
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ja2dc7grcmg"]
+
+[ext_resource type="Texture2D" uid="uid://bcvujturdonxd" path="res://assets/sprites/extra_tiles.png" id="1_mgu3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvkpl"]
+size = Vector2(96, 12)
+
+[node name="steel_lift" type="AnimatableBody2D"]
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mgu3f")
+region_enabled = true
+region_rect = Rect2(0, 112, 96, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wvkpl")
