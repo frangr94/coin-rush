@@ -2,7 +2,8 @@ extends Control
 
 @onready var start: Button = $buttons/start
 
-func _ready():
+func _ready():	
+
 	$buttons/start.grab_focus()
 	
 # start
@@ -14,11 +15,6 @@ func _on_start_pressed() -> void:
 	
 func _on_level_select_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
-
-
-# options
-func _on_options_pressed() -> void:
-	print("options")
 
 # exit
 func _on_exit_pressed() -> void:

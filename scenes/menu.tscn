@@ -85,17 +85,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_mhnvy")
 text = "Level select"
 
-[node name="options" type="Button" parent="buttons"]
-layout_mode = 2
-size_flags_vertical = 4
-focus_neighbor_top = NodePath("../level_select")
-focus_neighbor_bottom = NodePath("../Exit")
-theme_override_fonts/font = ExtResource("1_yqeox")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mhnvy")
-text = "Options"
-
 [node name="Exit" type="Button" parent="buttons"]
 layout_mode = 2
 size_flags_vertical = 4
@@ -109,6 +98,4 @@ text = "Exit"
 [connection signal="pressed" from="buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="buttons/level_select" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="buttons/level_select" to="." method="_on_level_select_pressed"]
-[connection signal="pressed" from="buttons/options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="buttons/options" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="buttons/Exit" to="." method="_on_exit_pressed"]

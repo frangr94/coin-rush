@@ -468,6 +468,7 @@ position = Vector2(-673, 37)
 script = ExtResource("10_172wr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/killzones/Killzone"]
+position = Vector2(165, 10)
 shape = SubResource("WorldBoundaryShape2D_172wr")
 
 [node name="start_sign" parent="Map" instance=ExtResource("7_y0kc7")]
