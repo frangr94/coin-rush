@@ -1,23 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://brto1cjfobyt3"]
+[gd_scene load_steps=10 format=3 uid="uid://dldvvq4rdrrfh"]
 
-[ext_resource type="Script" uid="uid://c3wmm6ph8l3x2" path="res://scripts/slime_red.gd" id="1_dyw1g"]
-[ext_resource type="PackedScene" uid="uid://c554ebj8r7c3r" path="res://scenes/killzone.tscn" id="2_n6pvg"]
-[ext_resource type="Texture2D" uid="uid://cha76vvaefpu" path="res://assets/sprites/slime_purple.png" id="2_pjw23"]
+[ext_resource type="Script" uid="uid://c3wmm6ph8l3x2" path="res://scripts/slime_red.gd" id="1_ib178"]
+[ext_resource type="Texture2D" uid="uid://cha76vvaefpu" path="res://assets/sprites/slime_purple.png" id="2_0flhh"]
+[ext_resource type="PackedScene" uid="uid://c554ebj8r7c3r" path="res://scenes/killzone.tscn" id="3_vbi2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2npkn"]
-atlas = ExtResource("2_pjw23")
+atlas = ExtResource("2_0flhh")
 region = Rect2(0, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd6lc"]
-atlas = ExtResource("2_pjw23")
+atlas = ExtResource("2_0flhh")
 region = Rect2(24, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gstla"]
-atlas = ExtResource("2_pjw23")
+atlas = ExtResource("2_0flhh")
 region = Rect2(48, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v5wyi"]
-atlas = ExtResource("2_pjw23")
+atlas = ExtResource("2_0flhh")
 region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v5wyi"]
@@ -43,8 +43,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0l8pv"]
 size = Vector2(10, 14)
 
-[node name="slime_red" type="Node2D"]
-script = ExtResource("1_dyw1g")
+[node name="slime_red_area" type="Node2D"]
+script = ExtResource("1_ib178")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
@@ -53,7 +53,7 @@ autoplay = "default"
 frame_progress = 0.99142206
 flip_h = true
 
-[node name="Killzone" parent="." instance=ExtResource("2_n6pvg")]
+[node name="Killzone" parent="." instance=ExtResource("3_vbi2w")]
 position = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -64,8 +64,12 @@ shape = SubResource("RectangleShape2D_0l8pv")
 position = Vector2(0, -7)
 target_position = Vector2(10, 0)
 collision_mask = 5
+collide_with_areas = true
+collide_with_bodies = false
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 target_position = Vector2(-10, 0)
 collision_mask = 5
+collide_with_areas = true
+collide_with_bodies = false
