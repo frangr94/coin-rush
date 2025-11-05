@@ -66,6 +66,22 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_rif6e")
 text = "Level 3
 "
 
+[node name="level_4" type="Button" parent="levels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3shnc")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_rif6e")
+text = "Level 4
+"
+
+[node name="level_5" type="Button" parent="levels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3shnc")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_rif6e")
+text = "Level 5
+"
+
 [node name="menu" type="Button" parent="levels"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_3shnc")
@@ -77,4 +93,6 @@ text = "Main menu
 [connection signal="pressed" from="levels/level_1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="levels/level_2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="levels/level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="levels/level_4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="levels/level_5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="levels/menu" to="." method="_on_menu_pressed"]
